@@ -65,7 +65,7 @@ def log_user(update: Update, context: CallbackContext):
            is_text = chatai.find_one({"chat":chat.id, "text": hey})
            Yo = is_text['check']
        else:
-           r = requests.get(f"http://api.brainshop.ai/get?bid={AI_BID}&uid={message.from_user.id}&key={AI_API_KEY}&msg={message.text}")
+           r = requests.get(f"http://api.brainshop.ai/get?bid=171075&key=1QHd6G81Ao5Cp42C&{message.from_user.id}&msg={message.text}")
            hey = r.json()["cnt"]
            Yo = None
        if Yo == "sticker": 
@@ -83,7 +83,7 @@ def log_user(update: Update, context: CallbackContext):
                is_text = chatai.find_one({"chat":chat.id, "text": hey})
                Yo = is_text['check']
            else:
-               r = requests.get(f"http://api.brainshop.ai/get?bid={AI_BID}&uid={message.from_user.id}&key={AI_API_KEY}&msg={message.text}")
+               r = requests.get(f"http://api.brainshop.ai/get?bid=171075&key=1QHd6G81Ao5Cp42C&{message.from_user.id}&msg={message.text}")
                hey = r.json()["cnt"]
                Yo = None
            if Yo == "sticker":
